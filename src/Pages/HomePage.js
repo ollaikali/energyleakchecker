@@ -1,7 +1,8 @@
 import React from "react";
+import StickyFooter from "../Components/Footer";
 
 export default function HomePage() {
   return (
-        <p>lorem ipsum</p>
+        <StickyFooter />
   )
 }
