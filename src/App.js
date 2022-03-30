@@ -1,7 +1,8 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignIn from "./Components/SignIn";
-import HomePage from "./Pages/HomePage";
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import StickyFooter from './Components/Footer'
+import SignIn from './Components/SignIn'
+import HomePage from './Pages/HomePage'
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<SignIn />} />
       </Routes>
+      <StickyFooter />
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
