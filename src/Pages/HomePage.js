@@ -1,8 +1,10 @@
-import React from "react";
-import StickyFooter from "../Components/Footer";
+import React from 'react'
+import StickyFooter from '../Components/Footer'
 
 export default function HomePage() {
   return (
-        <StickyFooter />
+    <>
+      <StickyFooter />
+    </>
   )
 }
