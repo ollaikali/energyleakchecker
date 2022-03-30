@@ -24,8 +24,8 @@ export default function StickyFooter() {
       sx={{
         minWidth: '100%',
         pt: 10,
-        position: "absolute",
-        bottom: 0
+        position: 'absolute',
+        bottom: 0,
       }}
     >
       <CssBaseline />
@@ -34,14 +34,20 @@ export default function StickyFooter() {
         sx={{
           py: 3,
           px: 2,
-          mt: 'auto',
           backgroundColor: (theme) =>
             theme.palette.mode === 'light'
               ? theme.palette.grey[300]
               : theme.palette.grey[800],
         }}
       >
-        <Container maxWidth="sm">
+        <Container
+          maxWidth="sm"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
           <Typography variant="body1">Footer will be here</Typography>
           <Copyright />
         </Container>
