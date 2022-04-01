@@ -22,6 +22,7 @@ import {
 } from '@mui/material'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import {Link as ReactLink} from "react-router-dom";
+import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 
 const drawerWidth = 240
 
@@ -78,6 +79,11 @@ const drawerElements = [
   {
     text: 'More Info',
     iconName: <HelpOutlineIcon />,
+    path: '/login',
+  },
+  {
+    text: 'Settings',
+    iconName: <SettingsApplicationsIcon />,
     path: '/login',
   },
 ]
