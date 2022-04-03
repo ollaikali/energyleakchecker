@@ -21,8 +21,8 @@ import {
   ListItemText,
 } from '@mui/material'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
-import {Link as ReactLink} from "react-router-dom";
-import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
+import { Link as ReactLink } from 'react-router-dom'
+import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications'
 
 const drawerWidth = 240
 
@@ -49,7 +49,7 @@ const Drawer = styled(MuiDrawer, {
 })(({ theme, open }) => ({
   '& .MuiDrawer-paper': {
     position: 'relative',
-    whiteSpace: 'nowrap',
+    // whiteSpace: 'nowrap',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
@@ -98,7 +98,6 @@ function DashboardContent() {
 
   return (
     <ThemeProvider theme={mdTheme}>
-      {/* <Box sx={{ display: 'flex' }}> */}
       <CssBaseline />
       <AppBar position="absolute" open={open}>
         <Toolbar
@@ -152,30 +151,19 @@ function DashboardContent() {
 
         <List>
           {drawerElements.map((item, key) => (
-            <ListItem button component={ReactLink} to={item.path} key={item.text}>
+            <ListItem
+              button
+              component={ReactLink}
+              to={item.path}
+              key={item.text}
+            >
               <ListItemIcon>{item.iconName}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
           ))}
         </List>
-
         <Divider />
       </Drawer>
-      <Box
-        component="main"
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === 'light'
-              ? theme.palette.grey[100]
-              : theme.palette.grey[900],
-          flexGrow: 1,
-          height: '100%',
-          overflow: 'auto',
-        }}
-      >
-        <Toolbar />
-      </Box>
-      {/* </Box> */}
     </ThemeProvider>
   )
 }
